@@ -1,17 +1,161 @@
-# Qamar Jamal — Portfolio Website
+# Hi, I'm Qamar Jamal 👋
 
-A single self-contained `index.html` (your photo is embedded inside it, so there's nothing else to upload).
+## Senior Techno-Functional Consultant | Oracle Primavera | PMIS | Project Controls
 
-## Put it on GitHub Pages (free hosting)
+Experienced Techno-Functional Consultant with **8+ years** of expertise in Project Planning, Scheduling, Project Controls, PMIS implementation, and Digital Construction Solutions. I specialize in Oracle Primavera technologies, enterprise project management solutions, and construction management platforms for EPC, Oil & Gas, Data Centre, Infrastructure, and Manufacturing projects.
 
-1. Go to https://github.com and create a new repository — name it exactly `your-username.github.io` (replace `your-username` with your actual GitHub username). This gives you the cleanest URL.
-   - If you'd rather use a project-style URL instead, any repo name works (e.g. `portfolio`) — the site will just live at `your-username.github.io/portfolio`.
-2. Click **Add file → Upload files**, then drag in `index.html` from this download. Commit the change.
-3. Go to the repo's **Settings → Pages**.
-4. Under "Build and deployment", set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`. Save.
-5. Wait 1–2 minutes, then visit the URL GitHub gives you (shown on that same Settings → Pages screen).
+---
 
-That's it — no build tools, no dependencies to install.
+## 👨‍💻 About Me
 
-## Editing later
-Everything (text, colors, layout) lives inside `index.html`. Open it in any text editor — the content sections are clearly labeled with HTML comments-free structure and match your resume: Profile, Timeline, Engagements, Skills, Certification & Education, Contact.
+- 💼 Senior Techno-Functional Consultant
+- 📍 Jaipur, Rajasthan, India
+- 🌱 Currently expanding expertise in Procore, Autodesk Construction Cloud (ACC), and Bluebeam
+- 🔄 Passionate about Digital Transformation in Construction and Project Controls
+- 📊 Experienced in PMIS Implementation, Scheduling, Reporting, Data Migration, and Systems Integration
+
+---
+
+## 🛠 Technical Skills
+
+### Project Controls & PMIS
+- Oracle Primavera P6 EPPM
+- Primavera Unifier
+- Primavera Cloud
+- Primavera Team Member
+- Microsoft Project
+- Oracle Aconex
+- Procore
+
+### Construction Platforms
+- Autodesk Construction Cloud (ACC)
+- Bluebeam Revu
+- Aconex EDMS
+
+### Reporting & Analytics
+- Oracle BI Publisher
+- Power BI
+- Primavera Analytics
+- Earned Value Reporting
+- S-Curve Reporting
+
+### Project Scheduling
+- WBS / EPS / OBS
+- CPM
+- CCPM
+- PERT
+- Resource Loading
+- Cost Loading
+- Baseline Management
+- Look-Ahead Planning
+
+### Integration
+- REST API
+- SQL
+- Oracle Gateway
+- Data Migration
+- Database Clustering (RAC/HA)
+
+---
+
+## 💼 Professional Experience
+
+### Senior Techno-Functional Consultant
+
+Working on enterprise Project Controls solutions involving:
+
+- Primavera P6 EPPM
+- Procore
+- Autodesk Construction Cloud
+- Bluebeam Revu
+- Project Controls Implementation
+- Scheduling Integration
+- Document Management
+- Progress Reporting
+
+### Previous Experience Includes
+
+- Primavera P6 EPPM Implementation
+- Primavera Unifier Configuration
+- Oracle Aconex Implementation
+- Shutdown Planning
+- Data Migration
+- PMIS Consulting
+- Dashboard Development
+- User Training
+
+Industries served:
+
+- Data Centres
+- EPC
+- Oil & Gas
+- Infrastructure
+- Manufacturing
+- Real Estate
+- Construction
+
+---
+
+## 🚀 Major Projects
+
+- Vantage Data Centre
+- Red Sea Global (Saudi Arabia)
+- Jeddah Central Development
+- DHL Construction
+- TECOM Innovation Hub
+- Hindustan Zinc Limited
+- Bharat Petroleum
+- Sterling & Wilson
+- Nakheel Real Estate
+- Oil India Limited
+
+---
+
+## 📜 Certifications
+
+- Oracle Primavera Unifier Essentials
+
+---
+
+## 🎓 Education
+
+- B.Tech – Mechanical Engineering
+- Diploma – Mechanical Engineering
+
+---
+
+## 🌍 Languages
+
+- English
+- Hindi
+- Urdu
+
+---
+
+## 📫 Contact
+
+📍 Jaipur, Rajasthan, India
+
+📧 qamar.jamal39@gmail.com
+
+---
+
+## 🤝 Let's Connect
+
+If you're looking for expertise in:
+
+- Primavera P6
+- Primavera Unifier
+- Primavera Cloud
+- Oracle Aconex
+- PMIS
+- Project Controls
+- Construction Digitalization
+- Scheduling
+- Project Planning
+
+Feel free to connect and collaborate!
+
+---
+
+⭐ *Thank you for visiting my GitHub profile!*
