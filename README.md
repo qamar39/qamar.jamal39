@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/qamar_jamal.jpeg" alt="Qamar Jamal" width="160" style="border-radius: 50%;" />
+
 # 🏗️ Qamar Jamal — Portfolio
 
 ### Senior Techno-Functional Consultant · Project Controls & Enterprise Systems
@@ -44,8 +46,10 @@ No `npm install`, no bundler, no build pipeline — it's a single `index.html` y
 
 ```
 .
-├── index.html    # Complete single-page portfolio (HTML + Tailwind + JS)
-└── README.md     # You are here
+├── index.html            # Complete single-page portfolio (HTML + Tailwind + JS)
+├── assets/
+│   └── qamar_jamal.jpeg  # Profile photo
+└── README.md             # You are here
 ```
 
 ---
@@ -103,7 +107,7 @@ python3 -m http.server 8000
 
 ## 🎨 Customizing
 
-- **Profile photo** — replace the placeholder box in the Hero section (`<div class="w-64 h-64 ...">`) with an `<img>` tag pointing to your photo.
+- **Profile photo** — swap `assets/qamar_jamal.jpeg` for a new image (keep the same filename, or update the `src` on the `<img>` tag in the Hero section of `index.html`).
 - **Colors** — edit the `tailwind.config` block at the top of `index.html` (`navy`, `brand`, `cyan` color scales).
 - **Fonts** — swap the Google Fonts `<link>` and the `fontFamily` values in `tailwind.config`.
 - **Content** — all copy lives directly in `index.html`; search for the section comments (`<!-- ============ HERO ============ -->`, etc.) to jump to a section quickly.
