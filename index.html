@@ -3,188 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qamar Jamal | Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+    <title>Qamar Jamal | Senior Techno-Functional Consultant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<body>
-
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-Qamar Jamal
-</div>
-
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h1>Senior Techno-Functional Consultant</h1>
-
-<p>
-Oracle Primavera • Primavera Unifier • Primavera Cloud • Procore • Autodesk Construction Cloud • Oracle Aconex • Project Controls • PMIS
-</p>
-
-<a href="#contact" class="btn">
-Contact Me
-</a>
-
-</div>
-
-</section>
-
-<section id="about" class="container">
-
-<h2>About Me</h2>
-
-<p>
-
-I am a Project Controls and PMIS Consultant with over 8 years of experience implementing enterprise project management solutions for EPC, Oil & Gas, Infrastructure, Manufacturing, Real Estate and Data Centre projects.
-
-My expertise includes Oracle Primavera P6, Primavera Unifier, Primavera Cloud, Oracle Aconex, Procore, Autodesk Construction Cloud and project scheduling.
-
-</p>
-
-</section>
-
-<section id="skills" class="container">
-
-<h2>Technical Skills</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>PMIS</h3>
-<p>Primavera P6, Unifier, Primavera Cloud, Oracle Aconex</p>
-</div>
-
-<div class="card">
-<h3>Construction Tech</h3>
-<p>Procore, Autodesk Construction Cloud, Bluebeam Revu</p>
-</div>
-
-<div class="card">
-<h3>Reporting</h3>
-<p>Power BI, Oracle BI Publisher, Primavera Analytics</p>
-</div>
-
-<div class="card">
-<h3>Integration</h3>
-<p>REST API, SQL, Oracle Gateway, Data Migration</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="experience" class="container">
-
-<h2>Experience</h2>
-
-<div class="timeline">
-
-<div class="job">
-
-<h3>Senior Techno-Functional Consultant</h3>
-
-<p>
-
-Working on enterprise PMIS implementation involving Primavera P6 EPPM, Procore, Autodesk Construction Cloud, Bluebeam and Project Controls solutions.
-
-</p>
-
-</div>
-
-<div class="job">
-
-<h3>Lead Project Management Consultant</h3>
-
-<p>
-
-Delivered Primavera P6 implementations, Oracle Aconex solutions, database migration, scheduling, dashboards and user training for large EPC and Data Centre projects.
-
-</p>
-
-</div>
-
-<div class="job">
-
-<h3>Junior Consultant</h3>
-
-<p>
-
-Worked on Primavera P6, Oracle Unifier, SAP Integration, Scheduling, Planning and PMIS implementation.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects" class="container">
-
-<h2>Major Projects</h2>
-
-<div class="grid">
-
-<div class="card">Vantage Data Centre</div>
-
-<div class="card">Red Sea Global</div>
-
-<div class="card">Jeddah Central Development</div>
-
-<div class="card">DHL Construction</div>
-
-<div class="card">Hindustan Zinc Ltd.</div>
-
-<div class="card">Bharat Petroleum</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="container">
-
-<h2>Contact</h2>
-
-<p>Email : qamar.jamal39@gmail.com</p>
-
-<p>Location : Jaipur, Rajasthan, India</p>
-
-<a href="mailto:qamar.jamal39@gmail.com" class="btn">
-Send Email
-</a>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Qamar Jamal | Portfolio
-
-</p>
-
-</footer>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Qamar <span class="text-blue-600">Jamal</span></span>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 transition">About</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-600 transition">Skills</a>
+                    <a href="#experience" class="text-slate-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 space-y-6">
+            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Senior Techno-Functional Consultant</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">Qamar Jamal</h1>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Techno-functional expert with 8+ years across Project Planning, Scheduling, Monitoring, and Control in EPC, Oil & Gas, Real Estate, Construction, and Manufacturing. Specialist in Oracle Primavera P6/EPPM, Unifier, Primavera Cloud, and Oracle Aconex.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-md hover:shadow-lg">Get In Touch</a>
+                <a href="#experience" class="bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-medium px-6 py-3 rounded-lg transition">View Experience</a>
+            </div>
+        </div>
+        <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-xl border-4 border-white flex-shrink-0 bg-slate-200">
+            <!-- Replace 'avatar.jpg' with your actual image file name or hosting link -->
+            <img src="avatar.jpg" alt="Qamar Jamal" class="w-full h-full object-cover onerror="this.style.display='none'">
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-white border-y border-slate-200 py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Expertise & Core Competencies</h2>
+                <p class="text-slate-500 mt-2">Enterprise project control platforms, engineering applications, and strategic data analytics.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Project Controls Platforms</h3>
+                    <p class="text-sm text-slate-600">Procore, Primavera P6/EPPM, Unifier, Primavera Cloud, Team Member, Oracle Aconex, MS Project.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Reporting & Analytics</h3>
+                    <p class="text-sm text-slate-600">Oracle BI Publisher, Power BI, Primavera Analytics, S-Curve & EV Reporting.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Integration & Migration</h3>
+                    <p class="text-sm text-slate-600">REST API, SQL, Oracle Gateway, EPC Connector, Data Migration, RAC/HA Clustering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+        </div>
+
+        <div class="space-y-12 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-200">
+            <!-- Experience Item 1 -->
+            <div class="relative flex flex-col md:flex-row items-start md:justify-between group">
+                <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white transform -translate-x-1.5 mt-1.5 shadow-xs"></div>
+                <div class="pl-12 md:pl-0 md:w-[45%] md:text-right">
+                    <span class="text-sm font-semibold text-blue-600">Present</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Senior Techno-Functional Consultant</h3>
+                    <h4 class="text-slate-500 text-sm font-medium">Vantage Data Centre Project</h4>
+                </div>
+                <div class="pl-12 md:pl-0 md:w-[45%] mt-2 md:mt-0 bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Deploying and supporting a complex project controls stack (Procore, Primavera P6 EPPM, Bluebeam, and ACC) for scalable data-centre delivery. Integrating scheduling data with project management workflows for unified status reporting.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="relative flex flex-col md:flex-row items-start md:justify-between group">
+                <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white transform -translate-x-1.5 mt-1.5 shadow-xs"></div>
+                <div class="pl-12 md:pl-0 md:w-[45%] md:text-right">
+                    <span class="text-sm font-semibold text-slate-500">Past Engagements</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Lead Project Management Consultant</h3>
+                </div>
+                <div class="pl-12 md:pl-0 md:w-[45%] mt-2 md:mt-0 bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Delivered high-impact solutions for Red Sea Global (upgraded 18 schemas for 350+ users), Pradeep Phosphate (shutdown planning), and DHL Construction (Oracle Aconex EDMS workflow configuration).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <h2 class="text-3xl font-bold">Let's Connect</h2>
+            <p class="text-slate-400 max-w-md mx-auto">Available for consulting engagements, system integrations, and enterprise project platform architecture.</p>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="mailto:qamar.jamal39@gmail.com" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-envelope"></i> qamar.jamal39@gmail.com</a>
+                <a href="tel:+918295470183" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-phone"></i> +91 82954 70183</a>
+                <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan, India</span>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-xs text-slate-500">
+                &copy; 2026 Qamar Jamal. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
