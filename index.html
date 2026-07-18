@@ -1,134 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qamar Jamal | Senior Techno-Functional Consultant</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qamar Jamal — Senior Techno-Functional Consultant</title>
+<meta name="description" content="Qamar Jamal — Senior Techno-Functional Consultant specializing in Oracle Primavera P6/EPPM, Unifier, Aconex, Procore and enterprise project controls integration.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 950: '#080D1F', 900: '#0C1330', 800: '#101A42', 700: '#16215A' },
+          brand: { 600: '#1E3A8A', 500: '#2A4FC4', 400: '#3E63DD' },
+          cyan: { 400: '#22D3EE', 500: '#06B6D4' },
+          slate: { 50: '#F7F8FB' }
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background:#F7F8FB; color:#1E293B; }
+  h1,h2,h3,h4,.font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* Blueprint grid backdrop for hero */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  /* Section eyebrow */
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  /* Nav link underline sweep */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute; left:0; bottom:-4px;
+    width:0; height:2px; background:#22D3EE;
+    transition: width .25s ease;
+  }
+  .nav-link:hover::after { width:100%; }
+
+  /* Skill card hover */
+  .skill-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .skill-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -18px rgba(15,23,42,0.25); border-color:#3E63DD; }
+
+  /* Gantt-style timeline rail */
+  .rail::before {
+    content:'';
+    position:absolute; left:0; top:0; bottom:0; width:2px;
+    background: linear-gradient(180deg, #22D3EE 0%, #2A4FC4 45%, #E2E8F0 100%);
+  }
+  .wbs-node {
+    box-shadow: 0 0 0 4px #F7F8FB, 0 0 0 6px #E2E8F0;
+  }
+  .wbs-node.active { box-shadow: 0 0 0 4px #F7F8FB, 0 0 0 6px #22D3EE; }
+
+  /* Duration bar (Gantt reference) */
+  .duration-bar { height:6px; border-radius:999px; background:linear-gradient(90deg,#2A4FC4,#22D3EE); }
+
+  ::selection { background:#22D3EE; color:#080D1F; }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible { outline: 2px solid #22D3EE; outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  .fade-up { opacity:0; transform: translateY(18px); animation: fadeUp .7s ease forwards; }
+  @keyframes fadeUp { to { opacity:1; transform:none; } }
+  .delay-1{animation-delay:.1s} .delay-2{animation-delay:.22s} .delay-3{animation-delay:.34s} .delay-4{animation-delay:.46s}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-xs">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <span class="text-xl font-bold text-slate-900 tracking-tight">Qamar <span class="text-blue-600">Jamal</span></span>
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#about" class="text-slate-600 hover:text-blue-600 transition">About</a>
-                    <a href="#skills" class="text-slate-600 hover:text-blue-600 transition">Skills</a>
-                    <a href="#experience" class="text-slate-600 hover:text-blue-600 transition">Experience</a>
-                    <a href="#contact" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body class="antialiased">
 
-    <!-- Hero Section -->
-    <header id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        <div class="flex-1 space-y-6">
-            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Senior Techno-Functional Consultant</span>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">Qamar Jamal</h1>
-            <p class="text-lg text-slate-600 leading-relaxed">
-                Techno-functional expert with 8+ years across Project Planning, Scheduling, Monitoring, and Control in EPC, Oil & Gas, Real Estate, Construction, and Manufacturing. Specialist in Oracle Primavera P6/EPPM, Unifier, Primavera Cloud, and Oracle Aconex.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-md hover:shadow-lg">Get In Touch</a>
-                <a href="#experience" class="bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-medium px-6 py-3 rounded-lg transition">View Experience</a>
-            </div>
-        </div>
-        <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-xl border-4 border-white flex-shrink-0 bg-slate-200">
-            <!-- Replace 'avatar.jpg' with your actual image file name or hosting link -->
-            <img src="avatar.jpg" alt="Qamar Jamal" class="w-full h-full object-cover onerror="this.style.display='none'">
-        </div>
-    </header>
+<!-- ============ NAV ============ -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-navy-950/85 border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5 group">
+      <span class="w-9 h-9 rounded-md bg-gradient-to-br from-brand-500 to-cyan-500 flex items-center justify-center font-display font-bold text-white text-sm">QJ</span>
+      <span class="font-display font-semibold text-white tracking-tight hidden sm:block">Qamar Jamal</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9 font-mono text-[13px] text-slate-300">
+      <a href="#about" class="nav-link hover:text-white transition-colors">01 · About</a>
+      <a href="#skills" class="nav-link hover:text-white transition-colors">02 · Skills</a>
+      <a href="#experience" class="nav-link hover:text-white transition-colors">03 · Experience</a>
+      <a href="#contact" class="nav-link hover:text-white transition-colors">04 · Contact</a>
+    </div>
+    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-md bg-cyan-500 hover:bg-cyan-400 transition-colors text-navy-950 font-semibold text-sm px-4 py-2">
+      <i class="fa-solid fa-paper-plane text-xs"></i> Get in Touch
+    </a>
+    <button id="menuBtn" class="md:hidden text-white text-xl" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden bg-navy-950 border-t border-white/10 px-6 py-4 flex flex-col gap-4 font-mono text-sm text-slate-300">
+    <a href="#about" class="mobile-link">01 · About</a>
+    <a href="#skills" class="mobile-link">02 · Skills</a>
+    <a href="#experience" class="mobile-link">03 · Experience</a>
+    <a href="#contact" class="mobile-link">04 · Contact</a>
+  </div>
+</header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-white border-y border-slate-200 py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Expertise & Core Competencies</h2>
-                <p class="text-slate-500 mt-2">Enterprise project control platforms, engineering applications, and strategic data analytics.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Project Controls Platforms</h3>
-                    <p class="text-sm text-slate-600">Procore, Primavera P6/EPPM, Unifier, Primavera Cloud, Team Member, Oracle Aconex, MS Project.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Reporting & Analytics</h3>
-                    <p class="text-sm text-slate-600">Oracle BI Publisher, Power BI, Primavera Analytics, S-Curve & EV Reporting.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Integration & Migration</h3>
-                    <p class="text-sm text-slate-600">REST API, SQL, Oracle Gateway, EPC Connector, Data Migration, RAC/HA Clustering.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden bg-navy-950 text-white pt-32 pb-24 lg:pt-40 lg:pb-32">
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="absolute -top-32 -right-32 w-[520px] h-[520px] bg-brand-500/25 blur-[130px] rounded-full"></div>
+  <div class="absolute bottom-0 left-1/3 w-[380px] h-[380px] bg-cyan-500/10 blur-[110px] rounded-full"></div>
 
-    <!-- Experience Timeline -->
-    <section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
-        </div>
+  <!-- decorative S-curve, referencing his EV / S-Curve reporting skill -->
+  <svg class="absolute right-0 top-24 w-1/2 max-w-xl opacity-25 hidden lg:block" viewBox="0 0 500 260" fill="none">
+    <path d="M10 230 C 120 230, 140 60, 260 60 S 400 20, 490 15" stroke="#22D3EE" stroke-width="2" stroke-dasharray="6 6"/>
+    <path d="M10 245 C 140 245, 170 140, 280 120 S 430 60, 490 55" stroke="#3E63DD" stroke-width="2"/>
+  </svg>
 
-        <div class="space-y-12 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-200">
-            <!-- Experience Item 1 -->
-            <div class="relative flex flex-col md:flex-row items-start md:justify-between group">
-                <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white transform -translate-x-1.5 mt-1.5 shadow-xs"></div>
-                <div class="pl-12 md:pl-0 md:w-[45%] md:text-right">
-                    <span class="text-sm font-semibold text-blue-600">Present</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Senior Techno-Functional Consultant</h3>
-                    <h4 class="text-slate-500 text-sm font-medium">Vantage Data Centre Project</h4>
-                </div>
-                <div class="pl-12 md:pl-0 md:w-[45%] mt-2 md:mt-0 bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Deploying and supporting a complex project controls stack (Procore, Primavera P6 EPPM, Bluebeam, and ACC) for scalable data-centre delivery. Integrating scheduling data with project management workflows for unified status reporting.
-                    </p>
-                </div>
-            </div>
+  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+    <div>
+      <p class="fade-up eyebrow text-cyan-400 mb-5">PROJECT CONTROLS · ERP TECHNO-FUNCTIONAL CONSULTING</p>
+      <h1 class="fade-up delay-1 font-display font-bold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-tight">
+        Qamar Jamal <span class="block text-cyan-400 mt-2">Senior Techno-Functional Consultant</span>
+      </h1>
+      <p class="fade-up delay-2 mt-7 text-slate-300 text-[1.05rem] leading-relaxed max-w-xl">
+        8+ years architecting Project Planning, Scheduling, Monitoring &amp; Control systems across EPC, Oil &amp; Gas, Real Estate, Construction and Manufacturing. Deep specialist in Oracle Primavera P6/EPPM, Unifier and Oracle Aconex — now extending into Procore, Bluebeam and Autodesk Construction Cloud, with end-to-end delivery across implementation, data migration, systems integration and BI dashboarding.
+      </p>
 
-            <!-- Experience Item 2 -->
-            <div class="relative flex flex-col md:flex-row items-start md:justify-between group">
-                <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white transform -translate-x-1.5 mt-1.5 shadow-xs"></div>
-                <div class="pl-12 md:pl-0 md:w-[45%] md:text-right">
-                    <span class="text-sm font-semibold text-slate-500">Past Engagements</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Lead Project Management Consultant</h3>
-                </div>
-                <div class="pl-12 md:pl-0 md:w-[45%] mt-2 md:mt-0 bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Delivered high-impact solutions for Red Sea Global (upgraded 18 schemas for 350+ users), Pradeep Phosphate (shutdown planning), and DHL Construction (Oracle Aconex EDMS workflow configuration).
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="fade-up delay-3 flex flex-wrap gap-4 mt-9">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-semibold px-6 py-3 rounded-md transition-colors">
+          <i class="fa-solid fa-envelope"></i> Let's Connect
+        </a>
+        <a href="#experience" class="inline-flex items-center gap-2 border border-white/25 hover:border-cyan-400 hover:text-cyan-400 transition-colors px-6 py-3 rounded-md font-semibold">
+          <i class="fa-solid fa-timeline"></i> View Experience
+        </a>
+      </div>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-slate-900 text-white py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-            <h2 class="text-3xl font-bold">Let's Connect</h2>
-            <p class="text-slate-400 max-w-md mx-auto">Available for consulting engagements, system integrations, and enterprise project platform architecture.</p>
-            <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="mailto:qamar.jamal39@gmail.com" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-envelope"></i> qamar.jamal39@gmail.com</a>
-                <a href="tel:+918295470183" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-phone"></i> +91 82954 70183</a>
-                <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan, India</span>
-            </div>
-            <div class="pt-8 border-t border-slate-800 text-xs text-slate-500">
-                &copy; 2026 Qamar Jamal. All rights reserved.
-            </div>
+      <div class="fade-up delay-4 grid grid-cols-3 gap-6 mt-14 max-w-lg font-mono">
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-cyan-400">8+</p>
+          <p class="text-[11px] tracking-wide text-slate-400 mt-1">YEARS IN PROJECT CONTROLS</p>
         </div>
-    </footer>
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-cyan-400">350+</p>
+          <p class="text-[11px] tracking-wide text-slate-400 mt-1">USERS · RED SEA GLOBAL P6 UPGRADE</p>
+        </div>
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-cyan-400">18</p>
+          <p class="text-[11px] tracking-wide text-slate-400 mt-1">DB SCHEMAS MIGRATED</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile placeholder -->
+    <div class="fade-up delay-2 flex justify-center lg:justify-end">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-2xl border border-cyan-400/30"></div>
+        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-navy-800/80 border border-white/10 flex flex-col items-center justify-center gap-3 text-slate-500">
+          <i class="fa-solid fa-user text-6xl"></i>
+          <span class="font-mono text-[11px] tracking-wide">PROFILE PHOTO</span>
+        </div>
+        <div class="absolute -bottom-5 -left-5 bg-navy-900 border border-white/10 rounded-lg px-4 py-2.5 font-mono text-xs shadow-xl">
+          <p class="text-cyan-400 font-semibold">Jaipur, Rajasthan, IN</p>
+          <p class="text-slate-400">Available for engagements</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[1fr_0.9fr] gap-16">
+    <div>
+      <p class="eyebrow text-brand-500">01 · ABOUT</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 text-slate-900">Bridging enterprise scheduling systems with real project delivery</h2>
+      <p class="mt-6 text-slate-600 leading-relaxed">
+        Qamar operates at the intersection of construction project controls and enterprise IT — configuring, integrating and migrating the platforms that EPC, oil &amp; gas, real estate and manufacturing programs run on. His work spans full-lifecycle Primavera P6/EPPM implementations, high-availability database clustering, and cross-platform integrations that unify scheduling, cost and document data into a single source of truth.
+      </p>
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Recent engagements have broadened his stack beyond core Oracle tools into Procore, Bluebeam Revu and Autodesk Construction Cloud — supporting data-centre construction delivery, document workflows, RFIs, submittals and drawing markups for multi-stakeholder coordination.
+      </p>
+
+      <div class="mt-9 grid sm:grid-cols-2 gap-4">
+        <div class="border border-slate-200 rounded-lg p-5">
+          <p class="eyebrow text-brand-500 mb-2"><i class="fa-solid fa-graduation-cap mr-1.5"></i>EDUCATION</p>
+          <p class="font-semibold text-slate-800 text-sm">B.Tech, Mechanical Engineering</p>
+          <p class="text-slate-500 text-sm">Arya College of Eng. &amp; I.T., RTU · 2015–2018</p>
+          <p class="font-semibold text-slate-800 text-sm mt-3">Diploma, Mechanical Engineering</p>
+          <p class="text-slate-500 text-sm">Yamuna Polytechnic, Haryana · 2012–2015</p>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-5">
+          <p class="eyebrow text-brand-500 mb-2"><i class="fa-solid fa-certificate mr-1.5"></i>CERTIFICATION</p>
+          <p class="font-semibold text-slate-800 text-sm">Primavera Unifier Essentials</p>
+          <p class="text-slate-500 text-sm">Oracle Corporation · Sep 2022</p>
+          <p class="eyebrow text-brand-500 mb-2 mt-5"><i class="fa-solid fa-language mr-1.5"></i>LANGUAGES</p>
+          <p class="text-slate-600 text-sm">English · Hindi · Urdu</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus areas card -->
+    <div class="bg-navy-950 text-white rounded-2xl p-8 lg:p-9 relative overflow-hidden self-start">
+      <div class="absolute -top-16 -right-16 w-56 h-56 bg-brand-500/30 blur-[90px] rounded-full"></div>
+      <p class="eyebrow text-cyan-400 relative">CORE FOCUS</p>
+      <h3 class="font-display font-semibold text-xl mt-2 relative">Where Qamar adds the most value</h3>
+      <ul class="mt-6 space-y-4 relative">
+        <li class="flex gap-3"><i class="fa-solid fa-diagram-project text-cyan-400 mt-1"></i><span class="text-slate-300 text-sm"><span class="text-white font-medium">End-to-end P6/EPPM implementation</span> — calendars, WBS, resource &amp; cost loading, baselining.</span></li>
+        <li class="flex gap-3"><i class="fa-solid fa-server text-cyan-400 mt-1"></i><span class="text-slate-300 text-sm"><span class="text-white font-medium">HA / RAC clustering &amp; data migration</span> — large-scale schema migrations for enterprise user bases.</span></li>
+        <li class="flex gap-3"><i class="fa-solid fa-chart-line text-cyan-400 mt-1"></i><span class="text-slate-300 text-sm"><span class="text-white font-medium">BI &amp; S-curve reporting</span> — Oracle BI Publisher, Power BI, Primavera Analytics.</span></li>
+        <li class="flex gap-3"><i class="fa-solid fa-people-group text-cyan-400 mt-1"></i><span class="text-slate-300 text-sm"><span class="text-white font-medium">End-user training &amp; enablement</span> — Aconex, P6 EPPM programs for large field teams.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="py-24 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <p class="eyebrow text-brand-500 text-center">02 · CORE COMPETENCIES</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 text-slate-900 text-center">The stack behind the schedule</h2>
+    <p class="text-slate-500 text-center max-w-2xl mx-auto mt-4">Six domains covering platform delivery, reporting, scheduling method and enterprise-grade integration.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+
+      <!-- Project Controls Platforms -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-layer-group"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Project Controls Platforms</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">Procore</span><span class="tag">Primavera P6/EPPM</span><span class="tag">Unifier</span><span class="tag">Primavera Cloud</span><span class="tag">Team Member</span><span class="tag">Oracle Aconex</span><span class="tag">MS Project</span>
+        </div>
+      </div>
+
+      <!-- Reporting & Analytics -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-chart-column"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Reporting &amp; Analytics</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">Oracle BI Publisher</span><span class="tag">Power BI</span><span class="tag">Primavera Analytics</span><span class="tag">S-Curve &amp; EV Reporting</span>
+        </div>
+      </div>
+
+      <!-- Integration & Migration -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-code-branch"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Integration &amp; Migration</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">REST API</span><span class="tag">SQL</span><span class="tag">Oracle Gateway</span><span class="tag">EPC Connector</span><span class="tag">Data Migration</span><span class="tag">RAC/HA Clustering</span>
+        </div>
+      </div>
+
+      <!-- Docs & Collaboration -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-file-signature"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Docs &amp; Collaboration</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">Autodesk Construction Cloud</span><span class="tag">Bluebeam Revu</span><span class="tag">Aconex EDMS</span><span class="tag">Workflow &amp; Markup Mgmt.</span>
+        </div>
+      </div>
+
+      <!-- Scheduling Techniques -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-gantt-chart-alt-fallback fa-diagram-project"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Scheduling Techniques</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">WBS/EPS/OBS</span><span class="tag">CPM</span><span class="tag">CCPM &amp; PERT</span><span class="tag">Resource &amp; Cost Loading</span><span class="tag">Baselines</span><span class="tag">Look-Ahead Planning</span>
+        </div>
+      </div>
+
+      <!-- Other Tools -->
+      <div class="skill-card bg-white border border-slate-200 rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-brand-600/10 text-brand-600 flex items-center justify-center text-lg mb-5"><i class="fa-solid fa-toolbox"></i></div>
+        <h3 class="font-display font-semibold text-lg text-slate-900">Other Tools</h3>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="tag">SAP MM/PS</span><span class="tag">Oracle Time Control</span><span class="tag">CAD (CREO)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <p class="eyebrow text-brand-500 text-center">03 · PROFESSIONAL EXPERIENCE</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 text-slate-900 text-center">Career timeline</h2>
+    <p class="text-slate-500 text-center max-w-2xl mx-auto mt-4">Read like a schedule: each role is a WBS node on the rail, landmark engagements carry their own duration bar.</p>
+
+    <div class="relative mt-16 pl-9 sm:pl-12 rail">
+
+      <!-- ROLE 1 -->
+      <div class="relative pb-16">
+        <span class="wbs-node active absolute -left-[38px] sm:-left-[50px] top-1 w-4 h-4 rounded-full bg-cyan-400"></span>
+        <p class="font-mono text-xs text-cyan-500 tracking-wide">WBS 1.0 · CURRENT</p>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mt-1">Senior Techno-Functional Consultant</h3>
+        <p class="text-brand-600 font-medium text-sm mt-1">Project: Vantage Data Centre</p>
+        <div class="duration-bar w-full max-w-xs mt-4 mb-5"></div>
+        <ul class="space-y-2.5 text-slate-600 text-sm leading-relaxed">
+          <li class="flex gap-2.5"><i class="fa-solid fa-check text-cyan-500 mt-1 text-xs"></i>Deploy and support a project controls stack combining Procore, Primavera P6 EPPM, Bluebeam Revu and Autodesk Construction Cloud (ACC) for data-centre construction delivery.</li>
+          <li class="flex gap-2.5"><i class="fa-solid fa-check text-cyan-500 mt-1 text-xs"></i>Configure document workflows, RFIs, submittals and drawing markups across Procore and ACC for multi-stakeholder coordination.</li>
+          <li class="flex gap-2.5"><i class="fa-solid fa-check text-cyan-500 mt-1 text-xs"></i>Integrate Primavera scheduling data with Procore project management workflows for unified progress reporting.</li>
+          <li class="flex gap-2.5"><i class="fa-solid fa-check text-cyan-500 mt-1 text-xs"></i>Provide techno-functional support, troubleshooting and best-practice guidance to project and site teams.</li>
+        </ul>
+      </div>
+
+      <!-- ROLE 2 -->
+      <div class="relative pb-16">
+        <span class="wbs-node absolute -left-[38px] sm:-left-[50px] top-1 w-4 h-4 rounded-full bg-brand-500"></span>
+        <p class="font-mono text-xs text-brand-500 tracking-wide">WBS 2.0</p>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mt-1">Lead Project Management Consultant</h3>
+        <p class="text-slate-500 text-sm mt-1">Selected engagements across EPC, Oil &amp; Gas, Real Estate, Data Centre &amp; Manufacturing clients</p>
+        <div class="duration-bar w-full max-w-md mt-4 mb-6" style="background:linear-gradient(90deg,#1E3A8A,#2A4FC4);"></div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-brand-500 tracking-wide mb-1.5">2.1 · JEDDAH CENTRAL DEVELOPMENT</p>
+            <p class="text-slate-600 text-sm">Primavera P6 EPPM vanilla implementation.</p>
+          </div>
+          <div class="border-2 border-cyan-400/40 bg-cyan-50/40 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-cyan-600 tracking-wide mb-1.5"><i class="fa-solid fa-star mr-1"></i>2.2 · RED SEA GLOBAL, KSA</p>
+            <p class="text-slate-700 text-sm">Primavera P6 EPPM upgrade with RAC/HA database clustering; migrated <span class="font-semibold">18 database schemas</span> for <span class="font-semibold">350+ users</span>.</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-brand-500 tracking-wide mb-1.5">2.3 · PRADEEP PHOSPHATE LTD., GOA</p>
+            <p class="text-slate-600 text-sm">Led shutdown/turnaround planning for an Ammonia Plant using MSP &amp; Primavera — Level 1–3 schedules, critical path &amp; delay analysis, S-curves and management reporting.</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-brand-500 tracking-wide mb-1.5">2.4 · DHL CONSTRUCTION &amp; TECOM INNOVATION HUB, DUBAI</p>
+            <p class="text-slate-600 text-sm">Configured Oracle Aconex EDMS workflows, field/inspection templates, markup, insight analytics and Outlook integration.</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5 sm:col-span-2">
+            <p class="font-mono text-[11px] text-brand-500 tracking-wide mb-1.5">2.5 · BLISS ANAND PVT. LTD. (SKID PROJECT)</p>
+            <p class="text-slate-600 text-sm">Delivered end-to-end Primavera P6 EPPM setup — calendars, WBS, resource/cost loading, baselining and reporting.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROLE 3 -->
+      <div class="relative">
+        <span class="wbs-node absolute -left-[38px] sm:-left-[50px] top-1 w-4 h-4 rounded-full bg-slate-400"></span>
+        <p class="font-mono text-xs text-slate-500 tracking-wide">WBS 3.0</p>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mt-1">Junior Consultant</h3>
+        <p class="text-slate-500 text-sm mt-1">Selected engagements across EPC, Oil &amp; Gas, Real Estate, Data Centre &amp; Manufacturing clients</p>
+        <div class="duration-bar w-full max-w-md mt-4 mb-6" style="background:linear-gradient(90deg,#64748B,#94A3B8);"></div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-slate-500 tracking-wide mb-1.5">3.1 · GE BUSINESS &amp; ORACLE UNIFIER</p>
+            <p class="text-slate-600 text-sm">Delivered Primavera P6 EPPM/Team Member integration with Tableau and SAP; configured Unifier cost business processes, custom prints and u-Designer dashboards.</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-slate-500 tracking-wide mb-1.5">3.2 · HINDUSTAN ZINC LTD. &amp; NMSCEL MUMBAI</p>
+            <p class="text-slate-600 text-sm">Implemented 5D BIM-integrated project management solutions using Primavera P6, SAP, Qlik Sense, Synchro and Bentley.</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-slate-500 tracking-wide mb-1.5">3.3 · BHARAT PETROLEUM &amp; STERLING &amp; WILSON</p>
+            <p class="text-slate-600 text-sm">Delivered field-level scheduling, progress monitoring and delay/variance reporting (via Detect Technologies).</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5">
+            <p class="font-mono text-[11px] text-slate-500 tracking-wide mb-1.5">3.4 · TRAINING PROGRAMS</p>
+            <p class="text-slate-600 text-sm">Delivered Primavera P6 EPPM/Aconex training for Nakheel Real Estate, Oil India Ltd. and Adani Petrochemical (Mundra).</p>
+          </div>
+          <div class="border border-slate-200 rounded-lg p-5 sm:col-span-2">
+            <p class="font-mono text-[11px] text-slate-500 tracking-wide mb-1.5">3.5 · MAHARASHTRA STATE ROAD DEVELOPMENT &amp; STERLING AND WILSON</p>
+            <p class="text-slate-600 text-sm">Implementation of Primavera P6 EPPM for Maharashtra state road development; served as Planning and Scheduling Engineer on the Sterling and Wilson project.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="bg-navy-950 text-white pt-24 pb-10 relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg opacity-60"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[280px] bg-brand-500/20 blur-[120px] rounded-full"></div>
+
+  <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <p class="eyebrow text-cyan-400">04 · CONTACT</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">Let's plan the next build together</h2>
+    <p class="text-slate-400 mt-4 max-w-xl mx-auto">Open to techno-functional consulting engagements in project controls, Primavera implementation and enterprise systems integration.</p>
+
+    <div class="grid sm:grid-cols-3 gap-5 mt-12">
+      <a href="mailto:qamar.jamal39@gmail.com" class="group border border-white/10 hover:border-cyan-400/60 rounded-xl p-6 transition-colors">
+        <i class="fa-solid fa-envelope text-cyan-400 text-xl"></i>
+        <p class="font-mono text-[11px] text-slate-500 mt-3 tracking-wide">EMAIL</p>
+        <p class="text-sm mt-1 break-all group-hover:text-cyan-400 transition-colors">qamar.jamal39@gmail.com</p>
+      </a>
+      <a href="tel:+918295470183" class="group border border-white/10 hover:border-cyan-400/60 rounded-xl p-6 transition-colors">
+        <i class="fa-solid fa-phone text-cyan-400 text-xl"></i>
+        <p class="font-mono text-[11px] text-slate-500 mt-3 tracking-wide">PHONE</p>
+        <p class="text-sm mt-1 group-hover:text-cyan-400 transition-colors">+91 82954 70183</p>
+      </a>
+      <div class="border border-white/10 rounded-xl p-6">
+        <i class="fa-solid fa-location-dot text-cyan-400 text-xl"></i>
+        <p class="font-mono text-[11px] text-slate-500 mt-3 tracking-wide">LOCATION</p>
+        <p class="text-sm mt-1">Jaipur, Rajasthan, India</p>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-xs font-mono">
+      <p>© <span id="year"></span> Qamar Jamal. All rights reserved.</p>
+      <p>Built with Tailwind CSS</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: #F1F5F9;
+    color: #334155;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #E2E8F0;
+  }
+  .mobile-link { padding: 6px 0; }
+</style>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
 
 </body>
 </html>
