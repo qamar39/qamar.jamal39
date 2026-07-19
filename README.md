@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/qamar_jamal.jpeg" alt="Qamar Jamal" width="160" style="border-radius: 50%;" />
+<img src="https://github.com/qamar39/qamar.jamal39/blob/main/.github/workflows/qamar%20pic.jpg" alt="Qamar Jamal" width="160" style="border-radius: 50%;" />
 
 # 🏗️ Qamar Jamal — Portfolio
 
